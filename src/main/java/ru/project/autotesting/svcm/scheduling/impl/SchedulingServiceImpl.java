@@ -32,16 +32,10 @@ public class SchedulingServiceImpl implements SchedulingService {
 	}
 
 	@Override
-	@Scheduled(initialDelay = 10000, fixedDelay = 100000)
+	@Scheduled(initialDelay = 10000, fixedDelay = 300000)
 	public void start() {
-		if (!this.lock.isLocked()) {
-			try {
-				this.lock.lock();
-				this.multiService.start(Integer.valueOf(this.threadNumber));
-			} finally {
-				this.lock.unlock();
-			}
-		}
+		if (!this.lock.isLocked())
+			this.multiService.start(Integer.valueOf(this.threadNumber));
 	}
 
 }

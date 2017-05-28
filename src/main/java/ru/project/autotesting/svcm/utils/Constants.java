@@ -28,9 +28,28 @@ public class Constants {
 
 	public class MonitoringConstants {
 
+		public final static String MONITORING_ATM_NAME = "http://localhost:7001/SVCM/pages/monitoring/atmActualState.xhtml";
+		public final static String MONITORING_GROUP_PAGE = "http://localhost:7001/SVCM/pages/monitoring/groupActualState.xhtml";
+
+		public final static String SELECT_ALL_GROUP_PAGE = "filterform:selectedGroup:selectTable:j_idt84";
+
 		public final static String FILTER_GROUPS = "filterform:selectedGroup:overlayToggle";
-		public final static String SELECT_ALL_GROUPS = "filterform:selectedGroup:selectTable:j_idt91";
+		public final static String SELECT_ALL_GROUPS = "filterform:selectedGroup:selectTable:j_idt123";
 		public final static String BTN_FILTER_GROUPS = "filterform:selectedGroup:selectTable:submitGroupFilterButton";
 		public final static String BTN_SEARCH = "filterform:searchButton";
+	}
+
+	public class Settings {
+
+		public final static String ATM_GROUP_SETTINGS_PAGE = "http://localhost:7001/SVCM/pages/settings/atmGroup.xhtml";
+
+		public final static String BTN_ADD_ATM_GROUP = "mainform:addGroupButton";
+		public final static String GROUP_DESCX_INPUT = "groupDescriptionInput";
+		public final static String GROUP_NAME_INPUT = "groupNameInput";
+		public final static String SAVE_ATM_GROUP_BTN = "popupSubmitButton";
+		public final static String SEARCH_GROUP_NAME_INPUT = "filterform:groupName";
+		public final static String DATA_LIST_GROUP = "mainform:groupList_data";
+		public final static String SEARCH_GROUPS = "filterform:searchButton";
+		public final static String CLASS_CELL_EMPTY = ".ui-widget-content.ui-datatable-empty-message";
 	}
 }

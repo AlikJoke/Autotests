@@ -25,6 +25,14 @@ public class CallableTask implements Callable<Integer> {
 	@Qualifier("monitoring")
 	private Activity monitoringActivity;
 
+	@Autowired
+	@Qualifier("atmGroupSettings")
+	private Activity atmGroupActivity;
+
+	@Autowired
+	@Qualifier("monitoringGroup")
+	private Activity monitoringGroupActivity;
+
 	protected CallableTask setThreadNumber(int threadNumber) {
 		this.threadNumber = threadNumber;
 		return this;
@@ -42,6 +50,8 @@ public class CallableTask implements Callable<Integer> {
 	public Integer call() throws Exception {
 		this.loginActivity.execute(this.threadNumber);
 		this.monitoringActivity.execute(this.threadNumber);
+		this.monitoringGroupActivity.execute(this.threadNumber);
+		this.atmGroupActivity.execute(this.threadNumber);
 		return this.threadNumber;
 	}
 
